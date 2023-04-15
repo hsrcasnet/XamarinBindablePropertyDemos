@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="XamarinBindablePropertyDemos.Controls.AddressView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="Control">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Entry
+            Grid.Row="0"
+            Placeholder="Street"
+            Text="{Binding Source={x:Reference Control}, Path=Street, Mode=TwoWay}" />
+
+        <Entry
+            Grid.Row="1"
+            Placeholder="Building Number"
+            Text="{Binding Source={x:Reference Control}, Path=BuildingNo}" />
+
+        <Entry
+            Grid.Row="2"
+            Placeholder="Post Code"
+            Text="{Binding Source={x:Reference Control}, Path=PostCode}" />
+
+        <Entry
+            Grid.Row="3"
+            Placeholder="Town"
+            Text="{Binding Source={x:Reference Control}, Path=Town}" />
+    </Grid>
+</ContentView>
