@@ -1,19 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="XamarinBindablePropertyDemos.MainPage"
+    x:Class="XamarinBindablePropertyDemos.Views.MainPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:XamarinBindablePropertyDemos.Controls">
 
-    <StackLayout>
-        <Label Text="Shipping Address:" />
+    <StackLayout
+        Padding="5"
+        Spacing="5">
+        <Label
+            FontSize="Medium"
+            Text="Shipping Address:" />
         <controls:AddressView
             BuildingNo="{Binding ShippingAddress.BuildingNo}"
             PostCode="{Binding ShippingAddress.PostCode}"
             Street="{Binding ShippingAddress.Street}"
             Town="{Binding ShippingAddress.Town}" />
 
-        <Label Text="Billing Address:" />
+        <BoxView HeightRequest="20" />
+
+        <Label
+            FontSize="Medium"
+            Text="Billing Address:" />
         <controls:AddressView
             BuildingNo="{Binding BillingAddress.BuildingNo}"
             PostCode="{Binding BillingAddress.PostCode}"

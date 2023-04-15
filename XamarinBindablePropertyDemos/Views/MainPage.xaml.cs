@@ -1,14 +1,14 @@
 ﻿using Xamarin.Forms;
 using XamarinBindablePropertyDemos.ViewModels;
 
-namespace XamarinBindablePropertyDemos
+namespace XamarinBindablePropertyDemos.Views
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
-            InitializeComponent();
-            BindingContext = new MainViewModel();
+            this.InitializeComponent();
+            this.BindingContext = new MainViewModel();
         }
     }
 }

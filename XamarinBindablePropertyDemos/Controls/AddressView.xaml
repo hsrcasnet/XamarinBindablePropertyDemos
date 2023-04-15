@@ -3,11 +3,11 @@
     x:Class="XamarinBindablePropertyDemos.Controls.AddressView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Name="Control">
+    x:Name="Control"
+    BackgroundColor="#E1E1E1">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -23,14 +23,22 @@
             Placeholder="Building Number"
             Text="{Binding Source={x:Reference Control}, Path=BuildingNo}" />
 
-        <Entry
-            Grid.Row="2"
-            Placeholder="Post Code"
-            Text="{Binding Source={x:Reference Control}, Path=PostCode}" />
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-        <Entry
-            Grid.Row="3"
-            Placeholder="Town"
-            Text="{Binding Source={x:Reference Control}, Path=Town}" />
+            <Entry
+                Grid.Column="0"
+                Placeholder="Post Code"
+                Text="{Binding Source={x:Reference Control}, Path=PostCode}" />
+
+            <Entry
+                Grid.Column="1"
+                Placeholder="Town"
+                Text="{Binding Source={x:Reference Control}, Path=Town}" />
+        </Grid>
+
     </Grid>
 </ContentView>

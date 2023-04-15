@@ -1,6 +1,5 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
+using XamarinBindablePropertyDemos.Views;
 
 namespace XamarinBindablePropertyDemos
 {
@@ -8,9 +7,9 @@ namespace XamarinBindablePropertyDemos
     {
         public App()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
-            MainPage = new MainPage();
+            this.MainPage = new MainPage();
         }
 
         protected override void OnStart()
